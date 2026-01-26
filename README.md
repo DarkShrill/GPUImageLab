@@ -38,3 +38,28 @@ This reduces computational complexity compared to the full 2D kernel.
 4) Sobel Edge Detection
 Computation of horizontal and vertical gradients (Gx, Gy) and edge magnitude.
 
+# Dataset
+## Kodak Image Dataset
+
+To evaluate the image processing filters implemented in CUDA C++, we use the Kodak Image Dataset, a well-known benchmark dataset widely adopted in the image processing and computer vision literature.
+
+The dataset consists of 24 uncompressed color images with a resolution of 768×512 pixels, featuring a wide variety of:
+
+ - scene content (natural scenes, objects, people),
+
+ - color distributions,
+
+ - textures and edge structures.
+
+These characteristics make the Kodak Image Dataset particularly suitable for evaluating:
+
+ - RGB to YUV color space conversion,
+
+ - Gaussian Blur (standard and separable implementations),
+
+ - Sobel Edge Detection.
+
+The same set of images is used across all experiments to ensure fair comparison, reproducibility, and consistent performance evaluation between different filtering approaches and implementations (CPU vs GPU).
+
+Official dataset source:
+http://r0k.us/graphics/kodak/
