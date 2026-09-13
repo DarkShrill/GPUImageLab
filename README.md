@@ -20,6 +20,30 @@ OBJECTIVES
 - Analyze Host↔Device transfer overhead
 - Validate correctness of GPU outputs against CPU results
 
+## 📊 Performance Results
+
+The project evaluates CPU and CUDA implementations across multiple image sizes and configurations, measuring:
+
+- execution time;
+- CPU vs GPU speedup;
+- Host-to-Device and Device-to-Host transfer overhead;
+- CUDA block configuration performance;
+- multi-stream scaling;
+- processing throughput in MPix/s.
+
+Detailed benchmark results and experimental analysis are available in the accompanying project paper and notebook.
+
+## ⚙️ Performance Analysis
+
+The benchmarking pipeline explores several GPU optimization strategies:
+
+- baseline vs optimized CUDA implementations;
+- 2D vs separable Gaussian convolution;
+- CUDA block-size tuning;
+- asynchronous multi-stream execution;
+- end-to-end timing including memory transfers.
+
+The included `generate_plot.py` script can generate performance plots directly from the benchmark CSV outputs.
 
 IMPLEMENTED FILTERS
 
